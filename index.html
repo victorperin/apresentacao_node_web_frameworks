@@ -72,13 +72,24 @@
 				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+						<aside class="notes">
+							O Node foi feito para construir aplicações de rede escaláveis. (E muito mais)<br/>
+							'Hello world' só com a lib http.<br/>
+							E ainda da pra diminuir isso se você usar algumas features ES6!
+						</aside>
+						<h2>Node <i class="fa fa-heart" style="color:#FF3333;"></i> Web</h2>
+						<blockquote cite="https://nodejs.org/en/about/">
+							As an asynchronous event driven framework, Node.js is designed to build scalable network applications.
+						</blockquote>
+						<pre><code class="hljs" data-trim contenteditable>
+var http = require('http');
+
+var callback = function (req, res) {
+  res.end('Ola mundo!');
+};
+
+http.createServer(callback).listen(3001, '127.0.0.1');
+						</code></pre>
 					</section>
 					<section>
 						<h2>Basement Level 1</h2>
