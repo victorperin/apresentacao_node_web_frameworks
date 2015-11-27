@@ -92,16 +92,34 @@ http.createServer(callback).listen(3001, '127.0.0.1');
 						</code></pre>
 					</section>
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+						<h2>Então, porque existem frameworks?</h2>
+						<p>NodeJS > Node Frameworks</p>
+						<p>Mas você vai escrever muito mais código.</p>
 					</section>
 					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
+						<h2>Exemplo de código SEM frameworks</h2>
+						<pre><code class="hljs" data-trim contenteditable>
+var http = require('http');
+var fs = require('fs');
+
+http.createServer(function(request, response) {
+  if (request.url == "/") {
+    response.writeHeader(200, {"Content-Type": "text/html"});
+    fs.createReadStream("./index.html").pipe(response);
+  } else {
+    fs.stat("."+request.url, function (err,status){
+      if(!err && status.isFile()){
+        response.writeHeader(200);
+        fs.createReadStream("."+request.url).pipe(response);
+      }
+      else{
+        response.writeHeader(404);
+        response.end("Arquivo nao encontrado.")
+      }
+    });
+  }
+}).listen(1337, '127.0.0.1');
+						</code></pre>
 					</section>
 				</section>
 
