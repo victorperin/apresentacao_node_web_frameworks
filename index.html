@@ -80,11 +80,11 @@
 							'Hello world' só com a lib http.<br/>
 							E ainda da pra diminuir isso se você usar algumas features ES6!
 						</aside>
-						<h2>Node <i class="fa fa-heart" style="color:#FF3333;"></i> Web</h2>
-						<blockquote cite="https://nodejs.org/en/about/">
+						<h2 class="fragment" data-fragment-index="0">Node <i class="fa fa-heart" style="color:#FF3333;"></i> Web</h2>
+						<blockquote cite="https://nodejs.org/en/about/" class="fragment" data-fragment-index="1">
 							As an asynchronous event driven framework, Node.js is designed to build scalable network applications.
 						</blockquote>
-						<pre><code class="hljs" data-trim contenteditable>
+						<pre class="fragment" data-fragment-index="2"><code class="hljs" data-trim contenteditable>
 var http = require('http');
 
 var callback = function(req, res) {
@@ -163,7 +163,7 @@ var server = app.listen(1337, function() {
 					<section>
 						<h2>Vantagens comparadas com o código anterior</h2>
 						<ul>
-							<li>Reconhece parâmetros de url get e os ignora;</li>
+							<li>Reconhece parâmetros de url e ignora;</li>
 							<li>Requisições (POST, PUT, etc) são bloqueadas;</li>
 							<li>Reconhece e retorna corretamente o 'Content-Type';</li>
 							<li>Maior Estabilidade;</li>
