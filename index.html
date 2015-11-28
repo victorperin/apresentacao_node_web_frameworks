@@ -124,10 +124,32 @@ http.createServer(function(request, response) {
 				</section>
 
 				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
+					<section>
+						<h2>ExpressJS</h2>
+						<p>
+							O framework minimalista.
+						</p>
+					</section>
+					<section>
+						<h2>Fundamentos</h2>
+						<ul>
+							<li>Velocidade de desenvolvimento</li>
+							<li>Simplicidade</li>
+							<li>"Anti-imperialista"</li>
+					</section>
+					<section>
+						<h2>Exemplo</h2>
+						<pre><code class="hljs" data-trim contenteditable>
+var express = require('express');
+var app = express();
+
+app.use('/', express.static('./'));
+
+var server = app.listen(1337, function() {
+  console.log('Servidor ouvindo na porta 1337!');
+});
+						</code></pre>
+					</section>
 				</section>
 
 				<section>
