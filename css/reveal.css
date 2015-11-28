@@ -1341,6 +1341,6 @@ html:-moz-full-screen-ancestor {
   /*********************************************
    * VICTOR PASSOU POR AQUI!!!
    *********************************************/
-section h3.legenda {
+section h3.legenda, section p.legenda {
   text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
 }

@@ -78,7 +78,8 @@
 						<aside class="notes">
 							O Node foi feito para construir aplicações de rede escaláveis. (E muito mais)<br/>
 							'Hello world' só com a lib http.<br/>
-							E ainda da pra diminuir isso se você usar algumas features ES6!
+							E ainda da pra diminuir isso se você usar algumas features ES6!<br/>
+							Se o node já consegue fazer isso, por que existem tantos frameworks?<br/>
 						</aside>
 						<h2 class="fragment" data-fragment-index="0">Node <i class="fa fa-heart" style="color:#FF3333;"></i> Web</h2>
 						<blockquote cite="https://nodejs.org/en/about/" class="fragment" data-fragment-index="1">
@@ -97,13 +98,13 @@ http.createServer(callback).listen(1337, '127.0.0.1');
 
 					<section>
 						<h2>Então, porque existem frameworks?</h2>
-						<p>NodeJS > Node Frameworks</p>
-						<p>Mas você vai escrever muito mais código.</p>
+						<p class="fragment" data-fragment-index="0">NodeJS > Node Frameworks</p>
+						<p class="fragment" data-fragment-index="1">Mas você vai escrever muito mais código.</p>
 					</section>
 
 					<section>
 						<h2>Exemplo de código SEM frameworks</h2>
-						<pre><code class="hljs" data-trim contenteditable>
+						<pre class="fragment" data-fragment-index="0"><code class="hljs" data-trim contenteditable>
 var http = require('http');
 var fs = require('fs');
 
@@ -163,11 +164,11 @@ var server = app.listen(1337, function() {
 					<section>
 						<h2>Vantagens comparadas com o código anterior</h2>
 						<ul>
-							<li>Reconhece parâmetros de url e ignora;</li>
-							<li>Requisições (POST, PUT, etc) são bloqueadas;</li>
-							<li>Reconhece e retorna corretamente o 'Content-Type';</li>
-							<li>Maior Estabilidade;</li>
-							<li>É MENOR!!!1!</li>
+							<li class="fragment" data-fragment-index="0">Reconhece parâmetros de url e ignora;</li>
+							<li class="fragment" data-fragment-index="1">Requisições (POST, PUT, etc) são bloqueadas;</li>
+							<li class="fragment" data-fragment-index="2">Reconhece e retorna corretamente o 'Content-Type';</li>
+							<li class="fragment" data-fragment-index="3">Maior Estabilidade;</li>
+							<li class="fragment" data-fragment-index="4">É MENOR!!!1!</li>
 						</ul>
 					</section>
 				</section>
@@ -176,7 +177,7 @@ var server = app.listen(1337, function() {
 
 				<section>
 					<h2>Mas é só o Express?</h2>
-					<p>
+					<p class="fragment" data-fragment-index="0">
 						Apresentando: <a target="_blank" href="http://nodeframework.com/">NodeFramework.com</a>
 					</p>
 				</section>
@@ -185,14 +186,14 @@ var server = app.listen(1337, function() {
 
 				<section>
 					<h3>Sinatra-like</h3>
-					<p>Estes frameworks oferecem configuração rica e são menos opinativos do que os Rails-like ou full-stack.</p>
-					<ul style="width:30%;">
+					<p class="fragment" data-fragment-index="0">Estes frameworks oferecem configuração rica e são menos opinativos do que os Rails-like ou full-stack.</p>
+					<ul style="width:30%;" class="fragment" data-fragment-index="0">
 						<li>Express</li>
 						<li>Hapi</li>
 						<li>Flatiron</li>
 						<li>Locomotive</li>
 					</ul>
-					<ul>
+					<ul class="fragment" data-fragment-index="0">
 						<li>Total.js</li>
 						<li>Koa.js</li>
 						<li>TWEE.IO</li>
@@ -204,13 +205,13 @@ var server = app.listen(1337, function() {
 
 				<section>
 					<h3>Rails-like</h3>
-					<p>Apresentar seu projeto corretamente. Crie a sua própria arte a partir de templates.</p>
-					<ul style="width:30%;">
+					<p class="fragment" data-fragment-index="0">Apresentar seu projeto corretamente. Crie a sua própria arte a partir de templates.</p>
+					<ul style="width:30%;" class="fragment" data-fragment-index="0">
 						<li>CompoundJS</li>
 						<li>geddy</li>
 						<li>Sails.js</li>
 					</ul>
-					<ul>
+					<ul class="fragment" data-fragment-index="0">
 						<li>Adonis</li>
 						<li>RhapsodyJS</li>
 						<li>Strapi</li>
@@ -222,7 +223,7 @@ var server = app.listen(1337, function() {
 				<section>
 					<section>
 						<h3>Full-stack frameworks</h3>
-						<p>As pedras preciosas do node. São construídos com Scaffold, Template Engines, WebSocket e bibliotecas de persistência.</p>
+						<p class="fragment" data-fragment-index="0">As pedras preciosas do node. São construídos com Scaffold, Template Engines, WebSocket e bibliotecas de persistência.</p>
 					</section>
 
 					<section data-background="http://1.bp.blogspot.com/-JvEv6sK4TMk/UqJ9UTW1NmI/AAAAAAAAAgo/O4GDCZYVBZs/s1600/that-escalated-quickly-anchorman-gif.gif">
@@ -259,8 +260,8 @@ var server = app.listen(1337, function() {
 
 				<section>
 					<h3>E muito mais!</h3>
-					<p>Menção honrosa: REST API frameworks</p>
-					<p>PS: Por favor, não tente testar todos...</p>
+					<p class="fragment" data-fragment-index="0">Menção honrosa: REST API frameworks</p>
+					<p class="fragment" data-fragment-index="1">PS: Por favor, não tente testar todos...</p>
 				</section>
 
 
@@ -274,17 +275,23 @@ var server = app.listen(1337, function() {
 
 					<section data-background="https://media.giphy.com/media/wErJXg1tIgHXG/giphy.gif">
 						<h3 class="legenda">
-							Não aprenda apenas frameworks.<br/><br/>
-							Aprenda JavaScript.
+							<span>Não aprenda apenas frameworks.</span><br/><br/>
+							<span  class="fragment" data-fragment-index="0">Aprenda JavaScript.</span>
 						</h3>
 					</section>
 
 					<section>
 						<h3>Encontre um equilibrio</h3>
-						<div ><p>Não seja nenhum desses dois:</p></div>
-						<div style="width:50%;float:left;"><img src="http://i.imgur.com/iRMEYrB.jpg"></div>
-						<div style="width:50%;float:right;"><img src="http://mdabydeen.github.io/jQuery-Basics/slides/img/jquery-dawg.jpg"></div>
+						<div class="fragment" data-fragment-index="2"><p>Não seja nenhum desses dois:</p></div>
+						<div class="fragment" data-fragment-index="0" style="width:50%;float:left;"><img src="http://i.imgur.com/iRMEYrB.jpg"></div>
+						<div class="fragment" data-fragment-index="1" style="width:50%;float:right;"><img src="http://mdabydeen.github.io/jQuery-Basics/slides/img/jquery-dawg.jpg"></div>
 					</section>
+				</section>
+
+				<section data-background="https://media.giphy.com/media/7rj2ZgttvgomY/giphy.gif">
+					<h3 class="legenda">That's all folks!</h3>
+					<p class="legenda">Caso precisem, o link para a apresentação estará na página do meetup.</p>
+					<p class="legenda">Dúvidas? Sugestões?</p>
 				</section>
 			</div>
 		</div>
